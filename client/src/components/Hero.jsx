@@ -1,12 +1,11 @@
 
 import React from 'react'
-import SideBar from './SideBar'
 import Destination from './Destination'
-import home from "./images/home.png"
-import popular from "./images/popular.png"
-import profilenav from "./images/profilenav.png"
-import favourites from "./images/favourites.png"
-import create from "./images/create.png"
+import home from "../assets/images/home.png"
+import popular from "../assets/images/popular.png"
+import profilenav from "../assets/images/profilenav.png"
+import favourites from "../assets/images/favourites.png"
+import create from "../assets/images/create.png"
 import MainComponent from './MainComponent'
 import { Link } from 'react-router-dom'
 

@@ -18,6 +18,9 @@ function App() {
     <div className='bg-[url("src/components/images/bg.jpeg")] h-screen w-screen bg-cover bg-no-repeat'>
       <div className="bg-[#000000] bg-opacity-25 h-20 mt-0 pt-0 ">
         <div className="flex justify-between  items-center ml-8 mr-8   text-white font-bold   ">
+    <div className='bg-[url("src/assets/images/bg.jpeg")] h-screen w-screen bg-cover bg-no-repeat'>
+      <div className="bg-[#000000] bg-opacity-25 h-26 mt-0 pt-0 ">
+        <div className="flex justify-between ml-8 mr-8   text-white font-bold   ">
           <div className="ml-12">
             <Link to="/">
               <img
@@ -26,6 +29,11 @@ function App() {
                 className="h-20 w-18   cursor-pointer"
               />
             </Link>
+            <img
+              src="src/assets/images/logo.png"
+              alt=""
+              className="h-28 w-30"
+            />
           </div>
           <div className="flex justify-evenly items-center gap-20 text-2xl   yeseva-one-regular">
             <div className='flex gap-20 justify-center items-center '>

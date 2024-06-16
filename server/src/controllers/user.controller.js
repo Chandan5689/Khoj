@@ -1,8 +1,8 @@
-import { User } from "../model/user.model";
-import { ApiError } from "../utils/ApiError";
-import { ApiResponse } from "../utils/ApiResponse";
-import { asyncHandler } from "../utils/asyncHandler";
-import { uploadToCloudinary } from "../utils/cloudinary";
+import { User } from "../model/user.model.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { uploadToCloudinary } from "../utils/cloudinary.js";
 
 const registerUser = asyncHandler(async (req, res)=>{
     const {username, email, password, location} = req.body
@@ -10,12 +10,12 @@ const registerUser = asyncHandler(async (req, res)=>{
     const reqFields = ["username", "email", "password", "location"]
 
     for (const field of reqFields){
-        if (!req.body(field)){
+        if (!req.body[field]){
             throw new ApiError(400, `${field} field is a required field!`)
         }
     }
 
-    const avatarFile = req.file
+    const avatarFile = req?.file?.path
 
     const avatar = avatarFile? await uploadToCloudinary(avatarFile):null
 
