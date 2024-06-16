@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import Modal from './Modal';
 import Login from './Login';
 import Register from './Register';
-
+import ModelFront from './ModalFront';
 function UserProfile() {
     const [open , setOpen] = useState(false);
     const handleClose = () => {
@@ -21,7 +21,7 @@ function UserProfile() {
             }}>
                 <FaUserCircle className='cursor-pointer ' color='grey' onClick = {handleOpen} size={50}/>
                 
-                <Modal isOpen={open} onClose={handleClose} boxHeight="65vh" boxWidth="40vw" >
+                <Modal isOpen={open} onClose={handleClose} boxHeight="70vh" boxWidth="40vw" >
                     <>
                        <Login />
                     </>

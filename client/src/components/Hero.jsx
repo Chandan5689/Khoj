@@ -8,6 +8,7 @@ import profilenav from "./images/profilenav.png"
 import favourites from "./images/favourites.png"
 import create from "./images/create.png"
 import MainComponent from './MainComponent'
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -15,8 +16,9 @@ function Hero() {
     <div 
     className=' w-full flex'>
       <div  className="sidebar w-1/6 h-screen bg-[#D9D9D9] bg-opacity-20  ">
-      <SideBar name="Home" icon= {home}/>
-    
+      <Link to="/">
+        <SideBar name="Home" icon= {home}/>
+      </Link>
       <SideBar name="Popular" icon= {popular}/>
       <SideBar name="Profile" icon= {profilenav}/>
       <SideBar name="Favourites" icon={favourites} />
